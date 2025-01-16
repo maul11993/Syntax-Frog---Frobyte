@@ -20,7 +20,7 @@ const Hero = () => {
       <div className="relative z-10 text-center">
         <div className="w-48 h-48 mx-auto mb-8 animate-float">
           <img
-            src="/placeholder.svg"
+            src="/lovable-uploads/50b1c0be-4bce-41b6-8db0-2084ea11d1f3.png"
             alt="Frobyte"
             className="w-full h-full object-contain"
           />
