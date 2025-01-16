@@ -1,17 +1,6 @@
-import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Code2, Coins, Users } from "lucide-react";
 
 const Hero = () => {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCount((prev) => (prev + 1) % 1000);
-    }, 100);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-dark text-white px-4">
       {/* Matrix-like background */}
@@ -56,31 +45,6 @@ const Hero = () => {
           >
             Join Community
           </Button>
-        </div>
-
-        {/* Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-          <div className="p-6 rounded-lg bg-dark/50 backdrop-blur border border-metal/20">
-            <Coins className="w-8 h-8 mb-2 mx-auto text-accent-gold" />
-            <div className="text-2xl font-bold text-accent-gold animate-glow">
-              ${(0.0042 + count * 0.0001).toFixed(4)}
-            </div>
-            <div className="text-metal">Token Price</div>
-          </div>
-          <div className="p-6 rounded-lg bg-dark/50 backdrop-blur border border-metal/20">
-            <Users className="w-8 h-8 mb-2 mx-auto text-neon-purple" />
-            <div className="text-2xl font-bold text-neon-purple animate-glow">
-              {1337 + count}
-            </div>
-            <div className="text-metal">Holders</div>
-          </div>
-          <div className="p-6 rounded-lg bg-dark/50 backdrop-blur border border-metal/20">
-            <Code2 className="w-8 h-8 mb-2 mx-auto text-neon-green" />
-            <div className="text-2xl font-bold text-neon-green animate-glow">
-              {42 + count}k
-            </div>
-            <div className="text-metal">Bugs Caught</div>
-          </div>
         </div>
       </div>
     </div>
